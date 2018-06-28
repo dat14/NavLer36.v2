@@ -1,0 +1,47 @@
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import argparse
+import sys
+import tempfile
+import csv
+import time
+import glob
+import scipy
+import os
+
+#os.environ["TF_MIN_GPU_MULTIPROCESSOR_COUNT"] = "5"
+#os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
+from distutils.core import setup
+
+import tensorflow as tf
+
+import sys
+print (sys.version)
+
+import random
+
+import numpy as np
+from PIL import Image
+from matplotlib import *
+from scipy.misc import imread, imsave
+from tensorflow.contrib.learn.python.learn.datasets import base
+
+from six.moves import xrange  # pylint: disable=redefined-builtin
+
+from tensorflow.python.framework import ops
+from tensorflow.python.framework import dtypes
+from tensorflow.python.framework import random_seed
+from tensorflow.python.platform import gfile
+from tensorflow.contrib.learn.python import __init__
+from tensorflow.python.saved_model.loader_impl import maybe_saved_model_directory
+from tensorflow.contrib.learn.python.learn.datasets import base
+
+from tqdm import tqdm
+
+from tensorflow.python.ops import gen_math_ops
+
+FLAGS = None
+DEFAULT_PADDING = 'SAME' 
